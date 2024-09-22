@@ -89,6 +89,7 @@ body{
     margin: 16px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
     border-radius: 8px;
+    font-size: 20px;
 }
 
 /* Best-Seller Section */
@@ -132,6 +133,7 @@ body{
     background-color: #3E2723; /* Same deep brown as header */
     color: white;
     font-size: 14px;
+    margin-top: 24px;
 }
 
 .footer a {
