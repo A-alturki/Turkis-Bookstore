@@ -92,10 +92,20 @@ body{
 }
 
 /* Best-Seller Section */
-.card .product {
+.best-sellers {
     display: flex;
     gap: 16px;
     margin-top: 20px;
+    justify-content: center;
+}
+
+.product{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.product-description, .product-image, .product-description{
+    text-align: center;
 }
 
 .product-image img {
