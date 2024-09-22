@@ -1,93 +1,127 @@
-/* Style the top navigation bar */
+/* Global Styles */
 
 
-body {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 1%;
-    background-color: #f5f5dc;
-    color: #333333; 
-}
-
-.header{
+body{
     display:flex;
     flex-direction: column;
-
+    margin:0;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.header-topline{
-    display:flex;
+.header, .mid, .footer{
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E2723; /* Warm brown header */
+    flex:1 1 150px;
+    padding-top: 10px;
+}
+
+.header-topline {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    
     
 }
-
-.searchbar input{
+.logoline, .searchbar, .cart{
     display:flex;
-    flex-grow: 1;
+}
+
+.searchbar{
+    display: inline-flex;
+    flex: 1;
+}
+
+.searchbar input {
+    
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    
 }
 
 .topnav {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    background-color: #333;
-    
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: left;
     display: flex;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    flex-grow: 1;
-  }
-  
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-.mid{
-    display:flex;
-    flex-direction: column;
-    gap:32px;
-    
-}
-
-.card{
-    display:flex;
-    flex-direction: column;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-
-.footer {
-    display:flex;
     justify-content: space-between;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #512B2B;
-    color: white;
+    background-color: #D79C4E; /* Muted orange nav */
+}
+
+.topnav a {
+    color: #f2f2f2;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #FFDEAD; /* Lighter hover effect */
+    color: #3E2723;
+}
+
+/* Main Content */
+.mid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card {
+    background-color: #FFF8E1; /* Softer cream card color */
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    border-radius: 8px;
+}
+
+/* Best-Seller Section */
+.card .product {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.product-image img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h1 {
     text-align: center;
-    
- }
+}
 
- .footer a{
-    padding: 14px 16px;
- }
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #3E2723; /* Same deep brown as header */
+    color: white;
+    font-size: 14px;
+}
 
-  /* color themes */
-  
+.footer a {
+    color: #FFD700; /* Gold for contact link */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust page width */
+
