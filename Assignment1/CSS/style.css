@@ -79,7 +79,16 @@ body {
     display:flex;
     flex-direction: column;
     flex-basis: 30%;
-    flex-grow: 0;   
+    flex-grow: 0;
+    gap:12px;
+    border-bottom: 2px solid #D79C4E;
+    padding-bottom: 10px;   
+}
+
+.summary-cart-product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -144,6 +153,7 @@ body {
     border-radius: 8px;
     font-size: 18px;
     transition: transform 0.3s ease;
+    border-bottom: 2px solid #D79C4E;
 }
 
 .card:hover {
