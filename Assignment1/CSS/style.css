@@ -36,6 +36,53 @@ body {
     display: flex;
 }
 
+/* cart specific layout */
+.mid .cart-container{
+    display: flex;
+    justify-content: space-around;
+    gap:72px;
+    align-items: flex-start; /* makes cart summary not stretch to shoppign cart length */
+}
+
+.cart-container .card{
+    width:40%;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.cart-container .card .product{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap:24px;
+    align-items: start;
+}
+
+.shopping-cart-card .product .product-description{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.shopping-cart-card {
+    display:flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-direction: column;
+    gap:32px;
+}
+
+.summary-cart-card{
+    display:flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    flex-grow: 0;   
+}
+
+
 .searchbar {
     display: flex;
     flex: 1;
@@ -153,7 +200,7 @@ body {
 
 .product-image img {
     width: 150px;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 4px;
 }
