@@ -204,7 +204,7 @@ body {
 }
 
 .best-sellers .product{
-    height: 450px;
+    height: 550px;
     width: 250px;
 }
 
@@ -228,6 +228,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
+    align-items: center ;
 }
 
 /* Footer */
@@ -297,4 +298,8 @@ body {
     color: #DDDDDD;
     cursor: not-allowed;
     opacity: 1;
+  }
+
+  .best-sellers .button-23{
+    max-width: 60%;
   }
