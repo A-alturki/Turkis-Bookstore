@@ -1,6 +1,13 @@
+<!--
+Name: Abdulelah Ali Alturki
+ID: 2136110
+Date: 9/24/2024
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags and favicon -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Assignment1/CSS/style.css">
@@ -8,23 +15,28 @@
     <title>Turki's Bookstore</title>
 </head>
 <body>
+
+    <!-- Header section -->
     <div class="header">
         <div class="header-topline">
+            
+            <!-- Logo linking back to the index page -->
             <div class="logoline">
-                <!--Goes to index page-->
                 <a href="index.html"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150" height=auto></a>
             </div>
             
-            
+            <!-- Search bar section -->
             <div class="searchbar">
                 <input type="text" placeholder="Search.." name="search" autocomplete="off">
             </div>
-    
+
+            <!-- Shopping cart section -->
             <div class="cart">
                 <a href="cart.html"><img src="../Images/shopping-cart.png" alt="Cart" width="50" height=auto></a>
             </div>
         </div>
 
+        <!-- Navigation bar links -->
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -33,11 +45,17 @@
         </div>
     </div>
    
-    <div class="mid ">
+    <!-- Main content section -->
+    <div class="mid">
+        
+        <!-- Shopping cart container -->
         <div class="cart-container">
-            <!--shopping cart card-->
+            
+            <!-- Shopping cart card -->
             <div class="card shopping-cart-card">
                 <h1>Shopping Cart</h1>
+                
+                <!-- First product in cart -->
                 <div class="product">
                     <div class="product-image">
                         <img src="../Images/The Ministry of Time.jpg" alt="The Ministry of Time">
@@ -51,27 +69,27 @@
                                 <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
+                <!-- Second product in cart -->
                 <div class="product">
                     <div class="product-image">
                         <img src="../Images/The Wager.jpg" alt="The Wager: A Tale of Shipwreck, Mutiny and Murder">
                     </div>
                     
                     <div class="product-description">
-                        <div >The Wager: A Tale of Shipwreck, Mutiny and Murder</div>
+                        <div>The Wager: A Tale of Shipwreck, Mutiny and Murder</div>
                         <div>
                             <div>16.99$</div>
                             <div>
                                 <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
                             </div>
                         </div>
-
                     </div>
                 </div>
 
+                <!-- Third product in cart -->
                 <div class="product">
                     <div class="product-image">
                         <img src="../Images/The Covenant of Water.jpg" alt="The Covenant of Water">
@@ -85,69 +103,50 @@
                                 <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
                             </div>
                         </div>
-
                     </div>
                 </div>
                 
             </div>
-            <!--summary card-->
+            
+            <!-- Cart summary card -->
             <div class="card summary-cart-card">
                 <h1>Cart Summary</h1>
 
+                <!-- Summary of first product -->
                 <div class="summary-cart-product">
-                    <div>
-                        The Ministry of Time: A Novel
-                    </div>
-                    <div>
-                        12.99$
-                    </div>
+                    <div>The Ministry of Time: A Novel</div>
+                    <div>12.99$</div>
                 </div>
 
+                <!-- Summary of second product -->
                 <div class="summary-cart-product">
-                    <div>
-                        The Wager: A Tale of Shipwreck, Mutiny and Murder
-                    </div>
-                    <div>
-                        16.99$
-                    </div>
+                    <div>The Wager: A Tale of Shipwreck, Mutiny and Murder</div>
+                    <div>16.99$</div>
                 </div>
 
+                <!-- Summary of third product -->
                 <div class="summary-cart-product">
-                    <div>
-                        The Covenant of Water
-                    </div>
-                    <div>
-                        9.99$
-                    </div>
+                    <div>The Covenant of Water</div>
+                    <div>9.99$</div>
                 </div>
                 
-                <h1></h1>
-
+                <!-- Grand total -->
                 <div class="summary-cart-product">
-                    <div>
-                        Grand Total:
-                    </div>
-                    <div>
-                        37.97$
-                    </div>
+                    <div>Grand Total:</div>
+                    <div>37.97$</div>
                 </div>
+                
+                <!-- Checkout button -->
                 <button class="button-23" role="button">Checkout</button>
-                
-
             </div>
         </div>
-        
     </div>
 
-
-
+    <!-- Footer section -->
     <div class="footer">
-        <div>
-            Author: Abdulelah Alturki
-        </div>
-        <div>
-            <a href="contact.html">Contact Us</a>
-        </div>
+        <div>&#169 2024 Turki's BookStore.</div>
+        <div><a href="contact.html">Contact Us</a></div>
     </div>
+
 </body>
 </html>
