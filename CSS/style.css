@@ -229,6 +229,17 @@ body {
     justify-content: center;
     margin-top: 10px;
     align-items: center ;
+    text-align: center;
+}
+
+.product-description blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.product-description blockquote p {
+    margin: 0;
 }
 
 /* Footer */
@@ -303,3 +314,4 @@ body {
   .best-sellers .button-23{
     max-width: 60%;
   }
+
