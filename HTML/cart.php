@@ -16,34 +16,9 @@ Date: 9/24/2024
 </head>
 <body>
 
-    <!-- Header section -->
-    <div class="header">
-        <div class="header-topline">
-            
-            <!-- Logo linking back to the index page -->
-            <div class="logoline">
-                <a href="index.html"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150" height=auto></a>
-            </div>
-            
-            <!-- Search bar section -->
-            <div class="searchbar">
-                <input type="text" placeholder="Search.." name="search" autocomplete="off">
-            </div>
-
-            <!-- Shopping cart section -->
-            <div class="cart">
-                <a href="cart.html"><img src="../Images/shopping-cart.png" alt="Cart" width="50" height=auto></a>
-            </div>
-        </div>
-
-        <!-- Navigation bar links -->
-        <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="bestsellers.html">Best-Sellers</a>
-            <a href="favorites.html">Turki's Favorites</a>
-        </div>
-    </div>
+    <?php
+    include "../Includes/footer.php"
+    ?>
    
     <!-- Main content section -->
     <div class="mid">
@@ -142,11 +117,8 @@ Date: 9/24/2024
         </div>
     </div>
 
-    <!-- Footer section -->
-    <div class="footer">
-        <div>&#169 2024 Turki's BookStore.</div>
-        <div><a href="contact.html">Contact Us</a></div>
-    </div>
-
+    <?php
+    include "../Includes/footer.php"
+    ?>
 </body>
 </html>
