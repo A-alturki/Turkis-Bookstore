@@ -17,7 +17,7 @@ Date: 9/24/2024
 <body>
 
     <?php
-    include "../Includes/footer.php"
+    include "../Includes/header.php"
     ?>
    
     <!-- Main content section -->

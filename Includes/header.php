@@ -24,7 +24,7 @@
             <a href="bestsellers.php">Best-Sellers</a>
             <a href="favorites.php">Turki's Favorites</a>
             <a href="upcoming.php">Upcoming Events</a>
-            
+            <a href="gallery.php">Author Gallery</a>
         </div>
     </div>
     <!-- Header section ends -->
