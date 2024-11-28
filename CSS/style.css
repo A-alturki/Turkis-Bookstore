@@ -36,6 +36,9 @@ body {
 .logoline, .searchbar, .cart {
     display: flex;
 }
+.cart{
+    padding-right: 12px;
+}
 
 /* cart specific layout */
 .mid .cart-container{
@@ -530,4 +533,48 @@ input[type="submit"]:hover {
 }
 .centeredtext{
     text-align: center;
+}
+label span{
+    color:red;
+    font-size: 16px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    align-items: center;
+    margin-left: auto; /* Push buttons to the right */
+}
+
+.auth-buttons .button {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Border color */
+    color: #333; /* Text color */
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons .login-btn:hover {
+    background-color: #f1c40f; /* Highlight color for hover */
+    color: white;
+    border-color: #f1c40f;
+}
+
+.auth-buttons .register-btn {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.auth-buttons .register-btn:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.regform{
+    padding-left: 400px;
+    padding-right: 400px;
 }

@@ -12,6 +12,8 @@ Date: 9/24/2024
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/favicon.ico">
+    <script src="../JS/validation.js"></script>
+
     <title>Turki's Bookstore</title>
 </head>
 <body>
@@ -35,28 +37,29 @@ Date: 9/24/2024
             <!-- Add more fields to the form -->
 <div class="card">
     <h1>Feedback Form</h1>
-    <form action="/submit_feedback.php" method="post">
+    <form id="feedbackform" name="feedbackform" method="post" onsubmit="return validateForm()" action="../backend/validation.php">
         <fieldset>
             <legend>Personal Information</legend>
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname" required>
+            <label for="fname">First name<span>*</span></label>
+            <input type="text" id="fname" name="fname" >
 
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="lname">Last name<span>*</span></label>
+            <input type="text" id="lname" name="lname" >
+            <label for="email">Email<span>*</span></label>
+            <input type="email" id="email" name="email" >
+            <div id="wrongemail"></div>
         </fieldset>
 
         <fieldset>
             <legend>Feedback</legend>
-            <label for="bookname">Book name (optional):</label>
+            <label for="bookname">Book Name</label>
             <input type="text" id="bookname" name="bookname">
             
-            <label for="satisfaction">Satisfaction level:</label>
+            <label for="satisfaction">Satisfaction level<span>*</span></label>
             <div class="radiocontainer">
                 <div class="radelement">
-                <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
-                <label for="satisfied">Satisfied</label>
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+                    <label for="satisfied">Satisfied</label>
                 </div>
 
                 <div class="radelement">
@@ -64,19 +67,19 @@ Date: 9/24/2024
                 <label for="not_satisfied">Not Satisfied</label>
                 </div>  
             </div>
-            <label for="genre_fiction">Select your favorite genres:</label>
+            <label for="genre">Select your favorite genres</label>
 
             <div class="radiocontainer">
                 <div class="radelement">
-                    <input type="checkbox" id="genre_fiction" name="genre" value="fiction">
-                    <label for="genre_fiction">Fiction</label>
+                    <input type="checkbox" id="genre_fiction" name="genre[]" value="fiction">
+                    <label for="genre">Fiction</label>
                 </div>
                 <div class="radelement">
-                    <input type="checkbox" id="genre_nonfiction" name="genre" value="nonfiction">
-                    <label for="genre_nonfiction">Non-Fiction</label>
+                    <input type="checkbox" id="genre_nonfiction" name="genre[]" value="nonfiction">
+                    <label for="genre">Non-Fiction</label>
                 </div>
             </div>
-            <label for="recommend">Would you recommend us?</label>
+            <label for="recommend">Would you recommend us?<span>*</span></label>
             <select id="recommend" name="recommend">
                 <option value="yes">Yes</option>
                 <option value="maybe">Maybe</option>
