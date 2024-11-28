@@ -22,7 +22,7 @@
                 <input type="email" id="email" name="email" >
 
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" >
+                <input type="text" id="password" name="password" autocomplete="off">
 
                 <input type="submit" value="Login">
             </form>

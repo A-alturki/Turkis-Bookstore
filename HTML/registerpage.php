@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +30,26 @@
                 <input type="email" id="email" name="email" >
 
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" >
+                <input type="text" id="password" name="password" autocomplete="off" >
                 <div id="badpass"></div>
 
                 <input type="submit" value="Register">
             </form>
+
+            <?php
+              
+
+              if (isset($_SESSION['error_message'])) {
+                  echo "<div class='error-message'>" . $_SESSION['error_message'] . "</div>";
+                  unset($_SESSION['error_message']);
+              }
+              
+              if (isset($_SESSION['success_message'])) {
+                  echo "<div class='success-message'>" . $_SESSION['success_message'] . "</div>";
+                  unset($_SESSION['success_message']);
+              }
+              
+            ?>
 
 
         </div>

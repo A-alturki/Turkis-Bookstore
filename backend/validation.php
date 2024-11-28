@@ -45,12 +45,6 @@
     
     # $sql = "INSERT INTO feedbackform VALUES ('$first_name','$last_name', '$email', '$bookname', '$satisfaction', '$genre', '$recommend', '$feedback')";
 
-    if(mysqli_stmt_execute( $stmt )){
-        echo "horraaaay";
-    }
-    else{
-        echo "error :(";
-    }
 
     $conn->close();
 ?>

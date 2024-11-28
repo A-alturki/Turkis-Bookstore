@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -24,17 +25,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo "Email is already registered.";
+        $_SESSION['error_message'] = "This email has already been used to create an account";
+        header("Location: ../HTML/registerpage.php");
         exit;
     }
-
+    
     // Insert the user into the database
     $stmt = $conn->prepare("INSERT INTO user (fname, lname, email, password) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $first_name, $last_name, $email, $hashed_password);
     
     if ($stmt->execute()) {
-        echo "Registration successful!";
-        header("Location: loginpage.php");
+        $_SESSION['success_message'] = "Registration Sucessful!";
+        header("Location: ../HTML/registerpage.php");
         exit;
     } else {
         echo "Error: " . $conn->error;
