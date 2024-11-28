@@ -18,7 +18,7 @@
 
         <!-- Login and Register buttons -->
         <div class="auth-buttons">
-            <a href="login.php" class="button login-btn">Login</a>
+            <a href="loginpage.php" class="button login-btn">Login</a>
             <a href="registerpage.php" class="button register-btn">Register</a>
         </div>
     </div>

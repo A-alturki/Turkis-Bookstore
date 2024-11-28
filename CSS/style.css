@@ -578,3 +578,27 @@ label span{
     padding-left: 400px;
     padding-right: 400px;
 }
+
+#badpass{
+    color: rgb(165, 32, 32);
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    background-color: #ffcccc;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: green;
+    background-color: #ccffcc;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid green;
+    border-radius: 5px;
+}

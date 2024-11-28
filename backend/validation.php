@@ -25,16 +25,24 @@
     $check_query->store_result();
 
     if ($check_query->num_rows > 0) {
-        echo "<script>
-            window.history.back();
-            alert('Email is already in use. Please use a different email.');
-            
-            </script>";
+        // Redirect with an error message
+        $url = "../HTML/contact.php?error=usedemail";
+        header("Location: $url");
+        exit;
+    } else {
+        $stmt = $conn->prepare("INSERT INTO feedbackform VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss", $first_name, $last_name, $email, $bookname, $satisfaction, $genre, $recommend, $feedback);
+        
+        if ($stmt->execute()) {
+            // Redirect with a success message
+            $url = "../HTML/contact.php?success=feedbacksubmitted";
+            header("Location: $url");
+            exit;
+        } else {
+            echo "Error: " . $conn->error;
+        }
     }
-    else{
-        $stmt = mysqli_prepare($conn,"INSERT INTO feedbackform VALUES (?,?, ?, ?, ?, ?, ?, ?)");
-        mysqli_stmt_bind_param($stmt, "ssssssss", $first_name, $last_name, $email, $bookname, $satisfaction, $genre, $recommend, $feedback);
-    }
+    
     # $sql = "INSERT INTO feedbackform VALUES ('$first_name','$last_name', '$email', '$bookname', '$satisfaction', '$genre', '$recommend', '$feedback')";
 
     if(mysqli_stmt_execute( $stmt )){

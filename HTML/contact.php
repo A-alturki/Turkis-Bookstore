@@ -90,6 +90,16 @@ Date: 9/24/2024
         </fieldset>
         <input type="submit" value="Submit Feedback">
     </form>
+    <?php
+        // Check for messages in the URL
+        if (isset($_GET['error']) && $_GET['error'] == 'usedemail') {
+            echo "<div class='error-message'>This email has already been used to submit feedback.</div>";
+        }
+        if (isset($_GET['success']) && $_GET['success'] == 'feedbacksubmitted') {
+            echo "<div class='success-message'>Thank you for your feedback! It has been submitted successfully.</div>";
+        }
+        ?>
+
 </div>
 
         </div>

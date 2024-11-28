@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/favicon.ico">
     <title>Turki's Bookstore</title>
+    <script src="../JS/validation.js"></script>
 </head>
 <body>
 <?php
@@ -23,7 +24,7 @@
                 <label for="password">Password</label>
                 <input type="text" id="password" name="password" >
 
-                <input type="submit" value="Register">
+                <input type="submit" value="Login">
             </form>
 
 

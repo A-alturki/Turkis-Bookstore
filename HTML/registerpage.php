@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/favicon.ico">
     <title>Turki's Bookstore</title>
+    <script src="../JS/validation.js"></script>
 </head>
 <body>
 <?php
@@ -15,7 +16,7 @@
         <div class="card regform">
 
 
-            <form class="centeredtext" id="registerform" name="registerform" method="post" onsubmit="return methodhere" action="../backend/registerback.php">
+            <form class="centeredtext" id="registerform" name="registerform" method="post" onsubmit="return validateRegister()" action="../backend/registerback.php">
 
 
                 <label for="fname">First name</label>
@@ -29,6 +30,7 @@
 
                 <label for="password">Password</label>
                 <input type="text" id="password" name="password" >
+                <div id="badpass"></div>
 
                 <input type="submit" value="Register">
             </form>
