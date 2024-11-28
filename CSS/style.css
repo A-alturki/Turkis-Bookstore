@@ -602,3 +602,7 @@ label span{
     border: 1px solid green;
     border-radius: 5px;
 }
+
+.welcomename{
+    color:white;
+}

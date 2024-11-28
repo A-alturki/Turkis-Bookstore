@@ -30,18 +30,24 @@ function validateForm() {
     return true;
   }
 
+
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   }
+
+
   function containsUppercase(str) {
     return /[A-Z]/.test(str);
   }
+
+
   function hasNumber(myString) {
     return /\d/.test(myString);
   }
 
-  function validateRegister(){
+  
+function validateRegister(){
     let fname = document.forms["registerform"]["fname"].value;
     let lname = document.forms["registerform"]["lname"].value;
     let email = document.forms["registerform"]["email"].value;
@@ -79,4 +85,4 @@ function validateForm() {
     }
     
     return true;
-  }
+}

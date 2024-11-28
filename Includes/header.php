@@ -1,3 +1,8 @@
+
+<?php
+// Start the session to access session variables
+session_start();
+?>
 <!-- Header section starts -->
 <div class="header">
     <div class="header-topline">
@@ -17,10 +22,17 @@
         </div>
 
         <!-- Login and Register buttons -->
+         <?php if(!isset($_SESSION['user_id'])){ ?>
         <div class="auth-buttons">
             <a href="loginpage.php" class="button login-btn">Login</a>
             <a href="registerpage.php" class="button register-btn">Register</a>
         </div>
+        <?php }else { ?> 
+        <div class="auth-buttons">
+            <span class="welcomename">Welcome, <?php echo htmlspecialchars($_SESSION['fname']); ?>!</span>
+            <a href="../backend/logout.php" class="button login-btn">Logout</a>
+        </div>
+        <?php } ?>
     </div>
 
     <!-- Navigation menu -->
