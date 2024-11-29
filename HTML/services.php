@@ -10,7 +10,7 @@ Date: 9/24/2024
     <!-- Meta tags and external stylesheet -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../global/style.css">
     <link rel="icon" href="../Images/favicon.ico">
 
     <!-- Page title -->
