@@ -6,6 +6,7 @@ Date: 9/24/2024
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta tags and external stylesheet -->
     <meta charset="UTF-8">
@@ -16,12 +17,13 @@ Date: 9/24/2024
     <!-- Page title -->
     <title>Turki's Bookstore</title>
 </head>
+
 <body>
     <!-- Header section with logo, search bar, and cart -->
     <?php
     include "../Includes/header.php"
     ?>
-   
+
     <!-- Main content section for NonFiction Best-Sellers -->
     <div class="mid">
         <div class="card">
@@ -44,7 +46,8 @@ Date: 9/24/2024
                     $img = $row["imgUrl"];
                     $price = $row["price"];
                     $author = $row["author"];
-                    if ($price > 0){
+                    $book_id = $row["asin"];
+                    if ($price > 0) {
                         echo "
                     <div class='product'>
                         <div class='product-image'>
@@ -58,12 +61,12 @@ Date: 9/24/2024
                             <div>
                                 <h4>$$price</h4>
                             </div>
-                            <button class='button-23' role='button'>Add To Cart</button>
+                            <form class='product-form' action='../backend/addtocart.php' method='post'>
+                                <button class='button-23 product-button' role='button' name='book_id' value='$book_id'  >Add To Cart</button>
+                            </form>
         </div>
     </div>";
                     }
-
-                    
                 }
                 ?>
             </div>
@@ -74,8 +77,8 @@ Date: 9/24/2024
             <h1>Fiction Best-Sellers</h1>
 
             <div class="best-sellers">
-                
-            <?php
+
+                <?php
                 $con = mysqli_connect("localhost", "root", "root", "bookstore");
                 $result = mysqli_query($con, "
                 SELECT * FROM book 
@@ -90,7 +93,8 @@ Date: 9/24/2024
                     $img = $row["imgUrl"];
                     $price = $row["price"];
                     $author = $row["author"];
-                    if ($price > 0){
+                    $book_id = $row["asin"];
+                    if ($price > 0) {
                         echo "
                     <div class='product'>
                         <div class='product-image'>
@@ -104,19 +108,19 @@ Date: 9/24/2024
                             <div>
                                 <h4>$$price</h4>
                             </div>
-                            <button class='button-23' role='button'>Add To Cart</button>
+                            <form class='product-form' action='../backend/addtocart.php' method='post'>
+                                <button class='button-23 product-button' role='button' name='book_id' value='$book_id'  >Add To Cart</button>
+                            </form>
         </div>
     </div>";
                     }
-
-                    
                 }
                 ?>
-                
 
-                
 
-                
+
+
+
             </div>
         </div>
     </div>
@@ -125,4 +129,5 @@ Date: 9/24/2024
     include "../Includes/footer.php"
     ?>
 </body>
+
 </html>

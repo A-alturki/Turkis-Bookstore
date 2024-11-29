@@ -607,3 +607,10 @@ label span{
     color:white;
 }
 
+.product-form{
+    box-sizing: border-box;
+    max-width: 60%;
+}
+.product-button{
+    max-width: 100% !important;
+}

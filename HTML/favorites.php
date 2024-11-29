@@ -44,6 +44,7 @@ Date: 9/24/2024
                     $img = $row["imgUrl"];
                     $price = $row["price"];
                     $author = $row["author"];
+                    $book_id = $row["asin"];
                     if ($price > 0){
                         echo "
                     <div class='product'>
@@ -58,7 +59,9 @@ Date: 9/24/2024
                             <div>
                                 <h4>$$price</h4>
                             </div>
-                            <button class='button-23' role='button'>Add To Cart</button>
+                            <form class='product-form' action='../backend/addtocart.php' method='post'>
+                                <button class='button-23 product-button' role='button' name='book_id' value='$book_id'  >Add To Cart</button>
+                            </form>
         </div>
     </div>";
                     }
