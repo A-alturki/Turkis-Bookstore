@@ -29,80 +29,43 @@ Date: 9/24/2024
             <!-- List of favorite books -->
             <div class="best-sellers">
 
-                <!-- First book product entry -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Meditations.jpg" alt="Meditations">
-                    </div>
-                    <div class="product-description">
-                        <h4>Meditations</h4>
-                        <blockquote>
-                            <p>"A timeless guide to inner strength and tranquility."</p>
-                        </blockquote>
-                        <p>- Ryan Holiday</p>
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+            <?php
+                $con = mysqli_connect("localhost", "root", "root", "bookstore");
+                $result = mysqli_query($con, "
+                SELECT * FROM book 
+                WHERE title LIKE '%The Paradox of Choice%'
+                OR title = 'The Four Agreements'
+                OR title LIKE '%The Psychology of Money%'
+                OR title = 'Meditations: A New Translation (Modern Library)'
+                OR title = 'Tuesdays with Morrie: An Old Man, a Young Man, and Life\'s Greatest Lesson, 25th Anniversary Edition'
+            ");
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row["title"];
+                    $img = $row["imgUrl"];
+                    $price = $row["price"];
+                    $author = $row["author"];
+                    if ($price > 0){
+                        echo "
+                    <div class='product'>
+                        <div class='product-image'>
+                            <img src='$img' alt='$title'>
+                        </div>
+                        <div class='product-description'>
+                            <div>
+                                <h4>$title</h4>
+                                <h5> by $author </h5>
+                            </div>
+                            <div>
+                                <h4>$$price</h4>
+                            </div>
+                            <button class='button-23' role='button'>Add To Cart</button>
+        </div>
+    </div>";
+                    }
 
-                <!-- Second book product entry -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Psychology of Money.jpg" alt="The Psychology of Money">
-                    </div>
-                    <div class="product-description">
-                        <h4>The Psychology of Money</h4>
-                        <blockquote>
-                            <p>"A brilliant exploration of how emotions and human behavior shape financial decisions."</p>
-                        </blockquote>
-                        <p>- James Clear</p>
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Third book product entry -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Paradox of Choice.jpg" alt="The Paradox of Choice">
-                    </div>
-                    <div class="product-description">
-                        <h4>The Paradox of Choice</h4>
-                        <blockquote>
-                            <p>"A sharp reminder that more choices often lead to less satisfaction and more anxiety"</p>
-                        </blockquote>
-                        <p>- Daniel H. Pink</p>
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Fourth book product entry -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/End Game.jpg" alt="End Game">
-                    </div>
-                    <div class="product-description">
-                        <h4>End Game</h4>
-                        <blockquote>
-                            <p>"A gripping thriller that keeps you on the edge of your seat from start to finish."</p>
-                        </blockquote>
-                        <p>- Lee Child</p>
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Fifth book product entry -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Four Agreements.jpg" alt="The Four Agreements">
-                    </div>
-                    <div class="product-description">
-                        <h4>The Four Agreements</h4>
-                        <blockquote>
-                            <p>"A simple yet profound guide to achieving personal freedom and inner peace."</p>
-                        </blockquote>
-                        <p>- Deepak Chopra</p>
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+                    
+                }
+                ?>
 
             </div>
         </div>

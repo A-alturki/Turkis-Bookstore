@@ -6,32 +6,34 @@ Date: 9/24/2024
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta tags and external stylesheets -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/favicon.ico">
-    
+
     <!-- Page title -->
     <title>Turki's Bookstore</title>
-    
+
 </head>
+
 <body>
-    
+
     <?php
     include "../Includes/header.php"
     ?>
-    
+
     <!-- Mid-section with description and services -->
     <div class="mid">
         <!-- Description card -->
         <div class="card">
             <h1><b>Description:</b></h1>
             <p>Discover the perfect book for every reader. At Turki's Bookstore, we believe that the right book can change your life.
-                 Whether you’re a fan of classic literature like <cite>Pride and Prejudice</cite> by Jane Austen,
-                  lover of sci-fi adventures like<cite> Dune </cite> by Frank Herbert, or on the lookout for the latest best-sellers, 
-                  we’ve got something for everyone. Our carefully curated collection ensures that you can always find something new to dive into.
+                Whether you’re a fan of classic literature like <cite>Pride and Prejudice</cite> by Jane Austen,
+                lover of sci-fi adventures like<cite> Dune </cite> by Frank Herbert, or on the lookout for the latest best-sellers,
+                we’ve got something for everyone. Our carefully curated collection ensures that you can always find something new to dive into.
 
             </p>
             <br>
@@ -65,73 +67,40 @@ Date: 9/24/2024
             <!-- Best-Sellers list -->
             <div class="best-sellers">
 
-                <!-- First product -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/the librarianist.jpg" alt="The librarianist">
-                    </div>
-                    <div class="product-description">
-                        <h4>The librarianist</h4>
-                        <blockquote>
-                            <p>"A must-read, an incredible journey!"</p>
-                        </blockquote>
-                        
-                        <p>- Eric alba</p>
-                        
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+                <?php
+                $con = mysqli_connect("localhost", "root", "root", "bookstore");
+                $result = mysqli_query($con, "
+                SELECT * FROM book 
+                WHERE title LIKE '%The Librarianist%'
+                OR title LIKE '%No Two Persons%'
+                OR title LIKE '%Tomorrow, and%'
+            ");
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row["title"];
+                    $img = $row["imgUrl"];
+                    $price = $row["price"];
+                    $author = $row["author"];
 
-                <!-- Second product -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/tomorrow, and tomorrow.jpg" alt="Tomorrow, and Tomorrow, and Tomorrow">
+                    echo "
+                    <div class='product'>
+                        <div class='product-image'>
+                            <img src='$img' alt='$title'>
+                        </div>
+                        <div class='product-description'>
+                            <div>
+                                <h4>$title</h4>
+                                <h5> by $author </h5>
+                            </div>
+                            <div>
+                                <h4>$$price</h4>
+                            </div>
+                            <button class='button-23' role='button'>Add To Cart</button>
                     </div>
-                    <div class="product-description">
-                        <h4>Tomorrow, and Tomorrow, and Tomorrow</h4>
-                        <blockquote>
-                            <p>"Thought-provoking and beautifully written!"</p>
-                        </blockquote>
-                        
-                        <p>- John Twain</p>
+                </div>";
+                }
+                ?>
 
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
 
-                <!-- Third product -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/no two persons.jpg" alt="No Two Persons">
-                    </div>
-                    <div class="product-description">
-                        <h4>No Two Persons</h4>
-                        <blockquote>
-                            <p>"An unforgettable tale."</p>
-                        </blockquote>
-                        
-                        <p>- George R. R. Martin</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Third product -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Kaiju No 8.jpg" alt="Kaiju No 8">
-                    </div>
-                    <div class="product-description">
-                        <h4>Kaiju No 8</h4>
-                        <blockquote>
-                            <p>"The Best manga I have read in years"</p>
-                        </blockquote>
-                        
-                        <p>- tsuna watchman</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -140,4 +109,5 @@ Date: 9/24/2024
     include "../Includes/footer.php"
     ?>
 </body>
+
 </html>

@@ -25,6 +25,7 @@
                         $title = $row["title"];
                         $img = $row["imgUrl"];
                         $price = $row["price"];
+                        $author = $row["author"];
                 
                         if ($price != 0){
                         echo "<div class='product'>
@@ -32,9 +33,15 @@
                                         <img src='".$img."' alt='.$title.'>
                                     </div>
                                     <div class='product-description'>
-                                        <h4>$title</h4>
+                                        <div>
+                                            <h4>$title</h4>
+                                            <h5> by $author </h5>
+                                        </div>
+                                        <div>
+                                        <h4>$$price</h4>
+                                        </div>
                                         
-                                        <h4>$price</h4>
+                                        
                 
                                         <button class='button-23' role='button'>Add To Cart</button>
                                     </div>

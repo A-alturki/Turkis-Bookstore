@@ -16,13 +16,13 @@
         <div class="card regform">
 
 
-            <form class="centeredtext" id="registerform" name="registerform" method="post" onsubmit="return methodhere" action="../backend/loginback.php">
+            <form class="centeredtext" id="registerform" name="registerform" method="post"  action="../backend/loginback.php">
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" >
 
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" autocomplete="off">
+                <input type="password" id="password" name="password" autocomplete="off">
 
                 <input type="submit" value="Login">
             </form>

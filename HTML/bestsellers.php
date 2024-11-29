@@ -29,85 +29,43 @@ Date: 9/24/2024
 
             <div class="best-sellers">
                 <!-- Product 1: Non-fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Next Conversation.jpg" alt="The Next Conversation">
-                    </div>
-                    <div class="product-description">
-                        <h4>The Next Conversation: Argue Less, Talk More</h4>
-                        <blockquote>
-                            <p>"A transformative guide to improving communication in any relationship."</p>
-                        </blockquote>
-                        
-                        <p>- Dr. John Gottman</p>
+                <?php
+                $con = mysqli_connect("localhost", "root", "root", "bookstore");
+                $result = mysqli_query($con, "
+                SELECT * FROM book 
+                WHERE title = 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones'
+                OR title LIKE '%Glad My Mom Died%'
+                OR title LIKE '%Thinking, Fast and Slow%'
+                OR title LIKE '%The Light We Carry: Overcoming in Uncertain Times%'
+                OR title LIKE '%Breath: The New Science of a Lost Art%'
+            ");
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row["title"];
+                    $img = $row["imgUrl"];
+                    $price = $row["price"];
+                    $author = $row["author"];
+                    if ($price > 0){
+                        echo "
+                    <div class='product'>
+                        <div class='product-image'>
+                            <img src='$img' alt='$title'>
+                        </div>
+                        <div class='product-description'>
+                            <div>
+                                <h4>$title</h4>
+                                <h5> by $author </h5>
+                            </div>
+                            <div>
+                                <h4>$$price</h4>
+                            </div>
+                            <button class='button-23' role='button'>Add To Cart</button>
+        </div>
+    </div>";
+                    }
 
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 2: Non-fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Sonny Boy A Memoir.jpg" alt="Sonny Boy: A Memoir">
-                    </div>
-                    <div class="product-description">
-                        <h4>Sonny Boy: A Memoir</h4>
-                        <blockquote>
-                            <p>"A poignant and powerful story of love, loss, and resilience."</p>
-                        </blockquote>
-                        <p>- Isabel Allende</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 3: Non-fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Dont Believe Everything You Think.jpg" alt="Don't Believe Everything You Think: Why Your Thinking Is The Beginning & End Of Suffering">
-                    </div>
-                    <div class="product-description">
-                        <h4>Don't Believe Everything You Think</h4>
-                        <blockquote>
-                            <p>"A profound and simple explanation of how our thoughts shape our reality."</p>
-                        </blockquote>
-                        <p>- Eckhart Tolle</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 4: Non-fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Framed.jpg" alt="Framed: Astonishing True Stories of Wrongful Convictions">
-                    </div>
-                    <div class="product-description">
-                        <h4>Framed: Astonishing True Stories of Wrongful Convictions</h4>
-                        <blockquote>
-                            <p>"A gripping look at the flaws in our justice system."</p>
-                        </blockquote>
-                        <p>- Bryan Stevenson</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 5: Non-fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Nexus.jpg" alt="Nexus: A Brief History of Information Networks from the Stone Age to AI">
-                    </div>
-                    <div class="product-description">
-                        <h4>Nexus: A Brief History of Information Networks from the Stone Age to AI</h4>
-                        <blockquote>
-                            <p>"A fascinating exploration of how networks have shaped human progress."</p>
-                        </blockquote>
-                        <p>- Yuval Noah Harari</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+                    
+                }
+                ?>
             </div>
         </div>
 
@@ -116,85 +74,49 @@ Date: 9/24/2024
             <h1>Fiction Best-Sellers</h1>
 
             <div class="best-sellers">
-                <!-- Product 1: Fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Saddled With Murder.jpg" alt="Saddled With Murder">
-                    </div>
-                    <div class="product-description">
-                        <h4>Saddled With Murder</h4>
-                        <blockquote>
-                            <p>"A cozy mystery with plenty of charm and unexpected twists"</p>
-                        </blockquote>
-                        <p>- Ellery Adams</p>
+                
+            <?php
+                $con = mysqli_connect("localhost", "root", "root", "bookstore");
+                $result = mysqli_query($con, "
+                SELECT * FROM book 
+                WHERE title LIKE '%Tomorrow, and Tomorrow, and Tomorrow%'
+                OR title = 'Demon Copperhead: A Pulitzer Prize Winner'
+                OR title LIKE '%The Seven Husbands of Evelyn Hugo%'
+                OR title = 'Fairy Tale'
+                OR title = 'Lessons in Chemistry: A Novel'
+            ");
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row["title"];
+                    $img = $row["imgUrl"];
+                    $price = $row["price"];
+                    $author = $row["author"];
+                    if ($price > 0){
+                        echo "
+                    <div class='product'>
+                        <div class='product-image'>
+                            <img src='$img' alt='$title'>
+                        </div>
+                        <div class='product-description'>
+                            <div>
+                                <h4>$title</h4>
+                                <h5> by $author </h5>
+                            </div>
+                            <div>
+                                <h4>$$price</h4>
+                            </div>
+                            <button class='button-23' role='button'>Add To Cart</button>
+        </div>
+    </div>";
+                    }
 
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+                    
+                }
+                ?>
+                
 
-                <!-- Product 2: Fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Pumpkin Spice Cafe.jpg" alt="The Pumpkin Spice Cafe">
-                    </div>
-                    <div class="product-description">
-                        <h4>The Pumpkin Spice Cafe</h4>
-                        <blockquote>
-                            <p>"A delightful romance that feels like a warm cup of coffee on a crisp autumn day."</p>
-                        </blockquote>
-                        <p>- Debbie Macomber</p>
+                
 
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 3: Fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Fourth Wing.jpg" alt="Fourth Wing">
-                    </div>
-                    <div class="product-description">
-                        <h4>Fourth Wing</h4>
-                        <blockquote>
-                            <p>"Epic, heart-pounding, and impossible to put down."</p>
-                        </blockquote>
-                        <p>- Sarah J. Maas</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 4: Fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Between You and Me.jpg" alt="Between You and Me">
-                    </div>
-                    <div class="product-description">
-                        <h4>Between You and Me</h4>
-                        <blockquote>
-                            <p>"A beautifully crafted tale of love, family, and second chances."</p>
-                        </blockquote>
-                        <p>- Kristin Hannah</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 5: Fiction best-seller -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/Onyx Storm.jpg" alt="Onyx Storm">
-                    </div>
-                    <div class="product-description">
-                        <h4>Onyx Storm</h4>
-                        <blockquote>
-                            <p>"A visually stunning and emotionally charged addition to the series."</p>
-                        </blockquote>
-                        <p>- Leigh Bardugo</p>
-
-                        <button class="button-23" role="button">Add To Cart</button>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
