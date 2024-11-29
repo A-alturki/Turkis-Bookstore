@@ -25,61 +25,59 @@ Date: 9/24/2024
         
         <!-- Shopping cart container -->
         <div class="cart-container">
-            
+        <?php
+        $product_data = array(); 
+        ?>
             <!-- Shopping cart card -->
             <div class="card shopping-cart-card">
                 <h1>Shopping Cart</h1>
                 
-                <!-- First product in cart -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Ministry of Time.jpg" alt="The Ministry of Time">
-                    </div>
-                    
-                    <div class="product-description">
-                        <div>The Ministry of Time: A Novel</div>
-                        <div>
-                            <div>12.99$</div>
-                            <div>
-                                <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                $conn = mysqli_connect("localhost", "root", "root", "bookstore"); 
+                if(isset($_SESSION['user_id'])){
+                    $user_id = $_SESSION['user_id'];
 
-                <!-- Second product in cart -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Wager.jpg" alt="The Wager: A Tale of Shipwreck, Mutiny and Murder">
-                    </div>
-                    
-                    <div class="product-description">
-                        <div>The Wager: A Tale of Shipwreck, Mutiny and Murder</div>
-                        <div>
-                            <div>16.99$</div>
-                            <div>
-                                <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    $stmt = $conn->prepare("SELECT * FROM book b
+                            join cart c on b.asin = c.book_id
+                            join user u on c.user_id = u.id
+                            WHERE user_id = ?");
+                    $stmt->bind_param("s", $user_id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
 
-                <!-- Third product in cart -->
-                <div class="product">
-                    <div class="product-image">
-                        <img src="../Images/The Covenant of Water.jpg" alt="The Covenant of Water">
-                    </div>
-                    
-                    <div class="product-description">
-                        <div>The Covenant of Water</div>
-                        <div>
-                            <div>9.99$</div>
-                            <div>
-                                <input type="number" id="quantity" name="quantity" min="0" max="9" value="1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    while ($row = $result->fetch_assoc()) {
+                        $title = $row["title"];
+                        $img = $row["imgUrl"];
+                        $price = $row["price"];
+                        $author = $row["author"];
+                        $book_id = $row["asin"];
+                        $quantity = $row["quantity"];
+
+                        $product_data[] = array('title'=>$row["title"], 'imgUrl'=>$row["imgUrl"],'price'=>$row["price"], 'author'=>$row["author"], 'book_id'=>$row["asin"], 'quantity'=>$row["quantity"]); // assignment
+
+                        echo "<div class='product'>
+                                <div class='product-image'>
+                                    <img src='$img' alt='$title'>
+                                </div>
+                                
+                                <div class='product-description'>
+                                    <div>$title</div>
+                                    <div>
+                                        <div>$$price</div>
+                                        <div>Quantity: $quantity</div>
+
+                                    </div>
+                                </div>
+                            </div>";                        
+                    }
+                }
+                else{
+                    echo "Make an account to add books to your cart!";
+                }
+                 ?>       
+
+                
+                
                 
             </div>
             
@@ -87,35 +85,46 @@ Date: 9/24/2024
             <div class="card summary-cart-card">
                 <h1>Cart Summary</h1>
 
-                <!-- Summary of first product -->
-                <div class="summary-cart-product">
-                    <div>The Ministry of Time: A Novel</div>
-                    <div>12.99$</div>
-                </div>
+                <?php
+                $sum = 0;
+                foreach ($product_data as $key => $value) {
+                    foreach ($value as $k => $v) {
+                        #echo "Key: $k; Value: $v\n";
+                            if($k == "title"){
+                                $title = $v;
+                            }
+                            else if($k == "price"){
+                                $price = $v;
+                            }
+                            else if($k == "quantity"){
+                                $quantity = $v;
+                            }
 
-                <!-- Summary of second product -->
-                <div class="summary-cart-product">
-                    <div>The Wager: A Tale of Shipwreck, Mutiny and Murder</div>
-                    <div>16.99$</div>
-                </div>
+                        }
+                        $itemSum = $price*$quantity;
+                        $sum += $itemSum;
+                        echo "<div class='summary-cart-product'>
+                            <div>$title</div>
+                                <div>$quantity x $price</div> 
+                            </div>";
+                    }
+                    
+                    echo "<div class='summary-cart-product'>
+                            <div>Grand Total:</div>
+                            <div>$sum</div>
+                        </div>";
+                ?>
 
-                <!-- Summary of third product -->
-                <div class="summary-cart-product">
-                    <div>The Covenant of Water</div>
-                    <div>9.99$</div>
-                </div>
                 
-                <!-- Grand total -->
-                <div class="summary-cart-product">
-                    <div>Grand Total:</div>
-                    <div>37.97$</div>
-                </div>
+                
+
                 
                 <!-- Checkout button -->
                 <button class="button-23" role="button">Checkout</button>
             </div>
         </div>
     </div>
+
 
     <?php
     include "../Includes/footer.php"
