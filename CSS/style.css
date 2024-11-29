@@ -401,7 +401,7 @@ td:last-child, th:last-child {
 
 
 /* Form Container */
-form {
+.form {
     margin: 20px 0;
     padding: 20px;
     background-color: #FFF8E1;

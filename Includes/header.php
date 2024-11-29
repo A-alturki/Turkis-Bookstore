@@ -13,7 +13,10 @@ session_start();
 
         <!-- Search bar input -->
         <div class="searchbar">
-            <input type="text" placeholder="Search.." name="search" autocomplete="off">
+            <form class="searchbar" action="../backend/search.php" method="get">
+                <input type="text" placeholder="Search.." name="search" autocomplete="off">
+            </form>
+
         </div>
 
         <!-- Shopping cart link -->
@@ -33,6 +36,8 @@ session_start();
             <a href="../backend/logout.php" class="button login-btn">Logout</a>
         </div>
         <?php } ?>
+
+        
     </div>
 
     <!-- Navigation menu -->
