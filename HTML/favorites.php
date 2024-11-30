@@ -94,7 +94,9 @@ Date: 9/24/2024
             <h1>Ali Abdaal's must read selection of books!</h1>
             <div class="videocard">
                 <object 
-                data="https://www.youtube.com/embed/N24X8kK7H4Q">
+                data="https://www.youtube.com/embed/N24X8kK7H4Q"
+                width="75%"
+                height="850px">
                 </object>
             </div>  
         </div>
