@@ -249,6 +249,7 @@ body {
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 16px;
     background-color: #3E2723;
     color: white;
@@ -330,18 +331,17 @@ body {
 
 /* Styling the container */
 .pdf-container {
-    width: 100%; /* Full width relative to parent container */
-    max-width: 800px; /* Limit the maximum width */
-    margin: 0 auto; /* Center horizontally */
-    aspect-ratio: 1 / √2; /* Maintains A4 paper dimensions */
-    border: 1px solid #ddd; /* Optional: border for debugging or visual purposes */
-    height: 800;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    aspect-ratio: 0.71; 
+    border: 1px solid #ddd; 
 }
 
 /* Styling the <object> element */
 .pdf-container object {
     width: 100% !important;
-    display: block; /* Removes inline space below object */
+    display: block; 
 }
 
 /* Table Styling */
