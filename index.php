@@ -11,8 +11,8 @@ Date: 9/24/2024
     <!-- Meta tags and external stylesheets -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global/style.css">
-    <link rel="icon" href="../Images/favicon.ico">
+    <link rel="stylesheet" href="global/style.css">
+    <link rel="icon" href="Images/favicon.ico">
 
     <!-- Page title -->
     <title>Turki's Bookstore</title>
@@ -22,7 +22,7 @@ Date: 9/24/2024
 <body>
 
     <?php
-    include "Includes/header.php"
+    include "Includes/indexheader.php"
     ?>
 
     <!-- Mid-section with description and services -->
@@ -112,7 +112,7 @@ Date: 9/24/2024
     </div>
 
     <?php
-    include "Includes/footer.php"
+    include "Includes/indexfooter.php"
     ?>
 </body>
 
