@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($stmt->execute()) {
         $_SESSION['success_message'] = "Registration Sucessful!";
-        header("Location: ../HTML/registerpage.php");
+        header("Location: ../HTML/loginpage.php");
         exit;
     } else {
         echo "Error: " . $conn->error;

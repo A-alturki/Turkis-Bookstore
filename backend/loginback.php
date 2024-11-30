@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(password_verify($userpassword, $hashpassword)){
         $_SESSION['user_id'] = $userid;
         $_SESSION['fname'] = $fname;
-        header("Location: ../HTML/index.php");
+        header("Location: ../index.php");
         exit;
     }
     else{
