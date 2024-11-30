@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 ?>
 <!-- Header section starts -->
 <div class="header">
