@@ -57,10 +57,10 @@ Date: 9/24/2024
                 OR title = 'Tuesdays with Morrie: An Old Man, a Young Man, and Life\'s Greatest Lesson, 25th Anniversary Edition'
             ");
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $title = $row["title"];
-                    $img = $row["imgUrl"];
+                    $title = htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8');
+                    $img = htmlspecialchars($row["imgUrl"], ENT_QUOTES, 'UTF-8');
                     $price = $row["price"];
-                    $author = $row["author"];
+                    $author = htmlspecialchars($row["author"], ENT_QUOTES, 'UTF-8');
                     $book_id = $row["asin"];
                     if ($price > 0){
                         echo "
@@ -77,7 +77,7 @@ Date: 9/24/2024
                                 <h4>$$price</h4>
                             </div>
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
-                                <button class='button-23 product-button' role='button' name='book_id' value='$book_id'  >Add To Cart</button>
+                                <button class='button-23 product-button' name='book_id' value='$book_id'  >Add To Cart</button>
                             </form>
         </div>
     </div>";
@@ -94,9 +94,7 @@ Date: 9/24/2024
             <h1>Ali Abdaal's must read selection of books!</h1>
             <div class="videocard">
                 <object 
-                data="https://www.youtube.com/embed/N24X8kK7H4Q"
-                width="75%"
-                height="850px">
+                data="https://www.youtube.com/embed/N24X8kK7H4Q">
                 </object>
             </div>  
         </div>

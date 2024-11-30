@@ -121,10 +121,10 @@ Date: 9/24/2024
                 OR title = 'Lessons in Chemistry: A Novel'
             ");
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $title = $row["title"];
-                    $img = $row["imgUrl"];
+                    $title = htmlspecialchars($row["title"], ENT_QUOTES, 'UTF-8');
+                    $img = htmlspecialchars($row["imgUrl"], ENT_QUOTES, 'UTF-8');
                     $price = $row["price"];
-                    $author = $row["author"];
+                    $author = htmlspecialchars($row["author"], ENT_QUOTES, 'UTF-8');
                     $book_id = $row["asin"];
                     if ($price > 0) {
                         echo "
