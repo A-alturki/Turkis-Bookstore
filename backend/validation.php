@@ -24,6 +24,7 @@
     $genre = $_POST["genre"] ?? null;
     $recommend = $_POST["recommend"];
     $feedback = $_POST["feedback"] ?? null;
+    $reading_format = $_POST["reading_format"] ?? null;
     
     $genre = is_array($genre) ? implode(",", $genre) : $genre;
 
@@ -38,8 +39,8 @@
         header("Location: $url");
         exit;
     } else {
-        $stmt = $conn->prepare("INSERT INTO feedbackform VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $first_name, $last_name, $email, $bookname, $satisfaction, $genre, $recommend, $feedback);
+        $stmt = $conn->prepare("INSERT INTO feedbackform VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssssss", $first_name, $last_name, $email, $bookname, $satisfaction, $genre, $recommend, $feedback, $reading_format);
         
         if ($stmt->execute()) {
             // Redirect with a success message

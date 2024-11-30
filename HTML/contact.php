@@ -82,6 +82,17 @@ Date: 9/24/2024
                     <label for="genre">Non-Fiction</label>
                 </div>
             </div>
+
+            <label for="reading_format">Preferred Reading Format</label>
+            <select id="reading_format" name="reading_format">
+                <option value="">Select Your Preferred Format</option>
+                <option value="hardcover">Hardcover Book</option>
+                <option value="paperback">Paperback Book</option>
+                <option value="ebook">E-Book</option>
+                <option value="audiobook">Audiobook</option>
+                <option value="digital_subscription">Digital Subscription</option>
+            </select>
+
             <label for="recommend">Would you recommend us?<span>*</span></label>
             <select id="recommend" name="recommend">
                 <option value="yes">Yes</option>
