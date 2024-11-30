@@ -22,7 +22,7 @@ Date: 9/24/2024
 <body>
 
     <?php
-    include "/Includes/header.php"
+    include "Includes/header.php"
     ?>
 
     <!-- Mid-section with description and services -->
@@ -112,7 +112,7 @@ Date: 9/24/2024
     </div>
 
     <?php
-    include "/Includes/footer.php"
+    include "Includes/footer.php"
     ?>
 </body>
 
