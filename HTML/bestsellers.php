@@ -32,7 +32,22 @@ Date: 9/24/2024
             <div class="best-sellers">
                 <!-- Product 1: Non-fiction best-seller -->
                 <?php
-                $con = mysqli_connect("localhost", "root", "root", "bookstore");
+                
+                $database_url = "mysql://root:TwodfSnAYqJeiiOPhRrtdPlxtNHXhTjj@junction.proxy.rlwy.net:18561/railway";
+
+                // Parse the URL
+                $db_url = parse_url($database_url);
+
+                $host = $db_url["host"];
+                $dbname = ltrim($db_url["path"], '/');
+                $username = $db_url["user"];
+                $password = $db_url["pass"];
+                $port = $db_url["port"];
+
+                // Establish a connection to the MySQL database
+                $con = mysqli_connect($host, $username, $password, $dbname, $port);
+
+
                 $result = mysqli_query($con, "
                 SELECT * FROM book 
                 WHERE title = 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones'
