@@ -137,7 +137,7 @@ Date: 9/24/2024
 
                 
                 <!-- Checkout button -->
-                <button class="button-23" role="button">Checkout</button>
+                <button class="button-23">Checkout</button>
             </div>
         </div>
     </div>

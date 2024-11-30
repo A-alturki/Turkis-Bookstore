@@ -58,7 +58,7 @@ Date: 9/24/2024
             <label for="bookname">Book Name</label>
             <input type="text" id="bookname" name="bookname">
             
-            <label for="satisfaction">Satisfaction level<span>*</span></label>
+            <label for="satisfaction"> Satisfaction level<span>*</span></label>
             <div class="radiocontainer">
                 <div class="radelement">
                     <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
@@ -71,14 +71,13 @@ Date: 9/24/2024
                 </div>  
             </div>
             <label for="genre">Select your favorite genres</label>
-
             <div class="radiocontainer">
                 <div class="radelement">
-                    <input type="checkbox" id="genre_fiction" name="genre[]" value="fiction">
+                    <input type="checkbox" id="genre" name="genre[]" value="fiction">
                     <label for="genre">Fiction</label>
                 </div>
                 <div class="radelement">
-                    <input type="checkbox" id="genre_nonfiction" name="genre[]" value="nonfiction">
+                    <input type="checkbox" id="genre" name="genre[]" value="nonfiction">
                     <label for="genre">Non-Fiction</label>
                 </div>
             </div>

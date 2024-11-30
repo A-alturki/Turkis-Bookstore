@@ -97,7 +97,7 @@ Date: 9/24/2024
             data="https://www.youtube.com/embed/N24X8kK7H4Q"
             width="750"
             height="850"
-            style="width: 75%; height: 850px">
+            style="width: 75%; height: 850px;">
             <param name="allowfullscreen" value="true"></param>
             Your browser does not support embedded videos.
         </object>
