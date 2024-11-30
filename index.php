@@ -115,7 +115,7 @@ Date: 9/24/2024
 
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
                                 
-                                <button class='button-23 product-button' role='button' name='book_id' value='$book_id'  >Add To Cart</button>
+                                <button class='button-23 product-button' name='book_id' value='$book_id'  >Add To Cart</button>
                             </form>
                             
                     </div>

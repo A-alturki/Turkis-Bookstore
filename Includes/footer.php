@@ -1,7 +1,7 @@
 <!-- Footer section -->
 <div class="footer">
     <div>
-        &#169 2024 Turki's BookStore.
+        &#169; 2024 Turki's BookStore.
     </div>
     <p>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">

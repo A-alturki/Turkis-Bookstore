@@ -7,7 +7,7 @@ ob_start();
     <div class="header-topline">
         <div class="logoline">
             <!-- Logo link to the index page -->
-            <a href="../index.php"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150" height="auto"></a>
+            <a href="../index.php"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150"></a>
         </div>
 
         <!-- Search bar input -->
@@ -20,7 +20,7 @@ ob_start();
 
         <!-- Shopping cart link -->
         <div class="cart">
-            <a href="cart.php"><img src="../Images/shopping-cart.png" alt="Cart" width="50" height="auto"></a>
+            <a href="cart.php"><img src="../Images/shopping-cart.png" alt="Cart" width="50"></a>
         </div>
 
         <!-- Login and Register buttons -->
