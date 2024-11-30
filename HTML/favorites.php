@@ -91,16 +91,18 @@ Date: 9/24/2024
         </div>
 
         <div class="card">
-            <h1>Ali Abdaal's must read selection of books!</h1>
-            <div class="videocard">
-                <object 
-                data="https://www.youtube.com/embed/N24X8kK7H4Q"
-                width="750"
-                height="850"
-                style="width: 75%; height: 850px";>
-                </object>
-            </div>  
-        </div>
+    <h1>Ali Abdaal's must read selection of books!</h1>
+    <div class="videocard">
+        <object 
+            data="https://www.youtube.com/embed/N24X8kK7H4Q"
+            width="750"
+            height="850"
+            style="width: 75%; height: 850px">
+            <param name="allowfullscreen" value="true"></param>
+            Your browser does not support embedded videos.
+        </object>
+    </div>  
+</div>
     </div>
     
 
