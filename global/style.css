@@ -536,7 +536,7 @@ input[type="submit"]:hover {
 .centeredtext{
     text-align: center;
 }
-label span{
+label span, p span{
     color:red;
     font-size: 16px;
 }
@@ -615,4 +615,8 @@ label span{
 }
 .product-button{
     max-width: 100% !important;
+}
+
+.boldp{
+    font-weight: bold;
 }
