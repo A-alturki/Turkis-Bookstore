@@ -114,7 +114,7 @@ Date: 9/24/2024
                 WHERE title LIKE '%Tomorrow, and Tomorrow, and Tomorrow%'
                 OR title = 'Demon Copperhead: A Pulitzer Prize Winner'
                 OR title LIKE '%The Seven Husbands of Evelyn Hugo%'
-                OR title = 'Fairy Tale'
+                OR title = 'End Game (Will Robie Book 5)'
                 OR title = 'Lessons in Chemistry: A Novel'
             ");
                 while ($row = mysqli_fetch_assoc($result)) {

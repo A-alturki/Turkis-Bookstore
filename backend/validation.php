@@ -1,9 +1,17 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "bookstore";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $database_url = "mysql://root:TwodfSnAYqJeiiOPhRrtdPlxtNHXhTjj@junction.proxy.rlwy.net:18561/railway";
+
+    // Parse the URL
+    $db_url = parse_url($database_url);
+
+    $host = $db_url["host"];
+    $dbname = ltrim($db_url["path"], '/');
+    $username = $db_url["user"];
+    $password = $db_url["pass"];
+    $port = $db_url["port"];
+
+    // Establish a connection to the MySQL database
+    $conn = mysqli_connect($host, $username, $password, $dbname, $port);
     if ($conn->connect_error) {
         die("Connection Failed :(".$conn->connect_error);
     }
