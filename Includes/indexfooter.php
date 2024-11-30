@@ -7,7 +7,7 @@
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
             <img style="margin:0px;padding:0px;border:0;width:36px  ;height:12px"
                 src="http://jigsaw.w3.org/css-validator/images/vcss"
-                alt="Valid CSS!" />
+                alt="Valid CSS!" >
         </a>
     </p>
     <div>
