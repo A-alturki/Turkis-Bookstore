@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!--
 Name: Abdulelah Ali Alturki
 ID: 2136110
