@@ -618,3 +618,9 @@ label span, p span{
 .boldp{
     font-weight: bold;
 }
+
+.validators{
+    display:flex;
+    flex-direction: row;
+    gap:8px;
+}
