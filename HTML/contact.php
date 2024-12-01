@@ -7,15 +7,15 @@ ID: 2136110
 Date: 9/24/2024
 -->
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE XHTML 1.0 Strict">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <!-- Meta tags and favicon -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global/style.css">
-    <link rel="icon" href="../Images/favicon.ico">
-    <script src="../JS/validation.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global/style.css"/>
+    <link rel="icon" href="../Images/favicon.ico"/>
+    <script src="../JS/validation.js" type="text/javascript"></script>
 
     <title>Turki's Bookstore</title>
 </head>
@@ -44,41 +44,41 @@ Date: 9/24/2024
         <fieldset>
             <legend>Personal Information</legend>
             <label for="fname">First name<span>*</span></label>
-            <input type="text" id="fname" name="fname" >
+            <input type="text" id="fname" name="fname"/>
 
             <label for="lname">Last name<span>*</span></label>
-            <input type="text" id="lname" name="lname" >
+            <input type="text" id="lname" name="lname"/>
             <label for="email">Email<span>*</span></label>
-            <input type="email" id="email" name="email" >
+            <input type="text" id="email" name="email"/>
             <div id="wrongemail"></div>
         </fieldset>
 
         <fieldset>
             <legend>Feedback</legend>
             <label for="bookname">Book Name</label>
-            <input type="text" id="bookname" name="bookname">
+            <input type="text" id="bookname" name="bookname"/>
             
             
             <p class="boldp"> Satisfaction level<span>*</span></p>
             <div class="radiocontainer">
                 <div class="radelement">
-                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
-                    <label for="">Satisfied</label>
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied"/>
+                    <label for="satisfied">Satisfied</label>
                 </div>
 
                 <div class="radelement">
-                <input type="radio" id="not_satisfied" name="satisfaction" value="not_satisfied">
+                <input type="radio" id="not_satisfied" name="satisfaction" value="not_satisfied"/>
                 <label for="not_satisfied">Not Satisfied</label>
                 </div>  
             </div>
             <p class="boldp">Select your favorite genres</p>
             <div class="radiocontainer">
                 <div class="radelement">
-                    <input type="checkbox" id="genrefiction" name="genre[]" value="fiction">
+                    <input type="checkbox" id="genrefiction" name="genre[]" value="fiction"/>
                     <label for="genrefiction">Fiction</label>
                 </div>
                 <div class="radelement">
-                    <input type="checkbox" id="genrenonfiction" name="genre[]" value="nonfiction">
+                    <input type="checkbox" id="genrenonfiction" name="genre[]" value="nonfiction"/>
                     <label for="genrenonfiction">Non-Fiction</label>
                 </div>
             </div>
@@ -100,9 +100,12 @@ Date: 9/24/2024
                 <option value="no">No</option>
             </select>
             <label for="feedback">Additional Comments:</label>
-            <textarea id="feedback" name="feedback" rows="5"></textarea>
+            <textarea id="feedback" name="feedback" rows="5" cols="50"></textarea>
         </fieldset>
-        <input type="submit" value="Submit Feedback">
+        <div>
+            <input type="submit" value="Submit Feedback"/>
+        </div>
+        
     </form>
     <?php
         // Check for messages in the URL
