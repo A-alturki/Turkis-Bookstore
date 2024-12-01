@@ -22,7 +22,7 @@ ob_start();
 
         <!-- Shopping cart link -->
         <div class="cart">
-            <a href="cart.php"><img src="../Images/shopping-cart.png" alt="Cart" width="50"></a>
+            <a href="cart.php"><img src="../Images/shopping-cart.png" alt="Cart" width="50"/></a>
         </div>
 
         <!-- Login and Register buttons -->
