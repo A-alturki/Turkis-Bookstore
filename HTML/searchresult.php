@@ -1,13 +1,17 @@
 <?php
 ob_start();
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE XHTML 1.0 Strict">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global/style.css">
-    <link rel="icon" href="../Images/favicon.ico">
+    <!-- Meta tags and external stylesheet -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global/style.css"/>
+    <link rel="icon" href="../Images/favicon.ico"/>
+
+    <!-- Page title -->
     <title>Turki's Bookstore</title>
 </head>
 <body>
@@ -31,24 +35,27 @@ ob_start();
                         $author = $row["author"];
                 
                         if ($price != 0){
-                        echo "<div class='product'>
-                                    <div class='product-image'>
-                                        <img src='".$img."' alt='.$title.'>
+                            echo "
+                            <div class='product'>
+                                <div class='product-image'>
+                                    <img src='$img' alt='$title' />
+                                </div>
+                                <div class='product-description'>
+                                    <div>
+                                        <h4>$title</h4>
+                                        <h5> by $author </h5>
                                     </div>
-                                    <div class='product-description'>
-                                        <div>
-                                            <h4>$title</h4>
-                                            <h5> by $author </h5>
-                                        </div>
-                                        <div>
+                                    <div>
                                         <h4>$$price</h4>
-                                        </div>
-                                        
-                                        
-                
-                                        <button class='button-23' role='button'>Add To Cart</button>
                                     </div>
-                                </div>";
+        
+                                    <form class='product-form' action='../backend/addtocart.php' method='post'>
+                                        <div>
+                                            <button type='submit' class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>";
                             }
                     }
                     
