@@ -7,13 +7,15 @@ ob_start();
     <div class="header-topline">
         <div class="logoline">
             <!-- Logo link to the index page -->
-            <a href="../index.php"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150"></a>
+            <a href="../index.php"><img src="../Images/Turki-Bookstore-Logo-Rectangle.png" alt="Turki-Bookstore-Logo" width="150"/></a>
         </div>
 
         <!-- Search bar input -->
         <div class="searchbar">
             <form class="searchbar" action="../backend/search.php" method="get">
-                <input type="text" placeholder="Search.." name="search" autocomplete="off">
+                <div class="searchbar">
+                    <input type="text" name="search"  />
+                </div>
             </form>
 
         </div>
