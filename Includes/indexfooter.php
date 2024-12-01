@@ -14,7 +14,7 @@
     </p>
 
     <p>
-    <a href="https://validator.w3.org/markup/check?uri=https://validator.w3.org/markup/check?uri=https%3A%2F%2Fturkis-bookstore-production.up.railway.app%2Findex.php;verbose=1"><img
+    <a href="https://validator.w3.org/check?uri=https%3A%2F%2Fturkis-bookstore-production.up.railway.app%2F&charset=%28detect+automatically%29&doctype=XHTML+1.0+Strict&group=0&user-agent=W3C_Validator%2F1.3+"><img
       src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
   </p>
 

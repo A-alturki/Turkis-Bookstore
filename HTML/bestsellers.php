@@ -8,14 +8,15 @@ Date: 9/24/2024
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE XHTML 1.0 Strict">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
     <!-- Meta tags and external stylesheet -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global/style.css">
-    <link rel="icon" href="../Images/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global/style.css"/>
+    <link rel="icon" href="../Images/favicon.ico"/>
 
     <!-- Page title -->
     <title>Turki's Bookstore</title>
