@@ -7,14 +7,14 @@ ID: 2136110
 Date: 9/24/2024
 -->
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE XHTML 1.0 Strict">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <!-- Meta tags and favicon -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../global/style.css">
-    <link rel="icon" href="../Images/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global/style.css"/>
+    <link rel="icon" href="../Images/favicon.ico"/>
     <title>Turki's Bookstore</title>
 </head>
 <body>
@@ -66,7 +66,7 @@ Date: 9/24/2024
                         echo "
                     <div class='product'>
                         <div class='product-image'>
-                            <img src='$img' alt='$title'>
+                            <img src='$img' alt='$title' />
                         </div>
                         <div class='product-description'>
                             <div>
@@ -76,11 +76,14 @@ Date: 9/24/2024
                             <div>
                                 <h4>$$price</h4>
                             </div>
+
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
-                                <button class='button-23 product-button' name='book_id' value='$book_id'  >Add To Cart</button>
+                                <div>
+                                    <button type='submit' class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
+                                </div>
                             </form>
-        </div>
-    </div>";
+                        </div>
+                    </div>";
                     }
 
                     
