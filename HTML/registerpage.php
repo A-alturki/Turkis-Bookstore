@@ -32,7 +32,7 @@ ob_start();
                 <input type="email" id="email" name="email" >
 
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" autocomplete="off" >
+                <input type="password" id="password" name="password" autocomplete="off" >
                 <div id="badpass"></div>
 
                 <input type="submit" value="Register">
