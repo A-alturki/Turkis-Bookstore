@@ -37,7 +37,7 @@ ob_start();
                     <input type="password" id="password" name="password" />
                     <div id="badpass"></div>
 
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register"/>
                 </div>
 
                 

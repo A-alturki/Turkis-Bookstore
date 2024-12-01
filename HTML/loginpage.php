@@ -22,15 +22,17 @@ ob_start();
         <div class="card regform">
 
 
-            <form class="centeredtext" id="registerform" name="registerform" method="post"  action="../backend/loginback.php">
+            <form class="centeredtext" id="registerform" method="post"  action="../backend/loginback.php">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email"/>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" >
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"/>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" autocomplete="off">
-
-                <input type="submit" value="Login">
+                    <input type="submit" value="Login"/>
+                </div>
+                
             </form>
             <?php
 
