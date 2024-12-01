@@ -7,25 +7,23 @@ ID: 2136110
 Date: 9/24/2024
 -->
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
     <!-- Meta tags and external stylesheets -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global/style.css">
-    <link rel="icon" href="Images/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global/style.css" />
+    <link rel="icon" href="Images/favicon.ico" />
 
     <!-- Page title -->
     <title>Turki's Bookstore</title>
-
 </head>
 
 <body>
-
     <?php
-    include "Includes/indexheader.php"
+    include "Includes/indexheader.php";
     ?>
 
     <!-- Mid-section with description and services -->
@@ -33,13 +31,12 @@ Date: 9/24/2024
         <!-- Description card -->
         <div class="card">
             <h1><b>Description:</b></h1>
-            <p>Discover the perfect book for every reader. At Turki's Bookstore, we believe that the right book can change your life.
+            <p>
+                Discover the perfect book for every reader. At Turki's Bookstore, we believe that the right book can change your life.
                 Whether you’re a fan of classic literature like <cite>Pride and Prejudice</cite> by Jane Austen,
-                lover of sci-fi adventures like<cite> Dune </cite> by Frank Herbert, or on the lookout for the latest best-sellers,
+                lover of sci-fi adventures like <cite>Dune</cite> by Frank Herbert, or on the lookout for the latest best-sellers,
                 we’ve got something for everyone. Our carefully curated collection ensures that you can always find something new to dive into.
-
             </p>
-            <br>
         </div>
 
         <!-- Services offered card -->
@@ -69,7 +66,6 @@ Date: 9/24/2024
 
             <!-- Best-Sellers list -->
             <div class="best-sellers">
-
                 <?php
                 $database_url = "mysql://root:TwodfSnAYqJeiiOPhRrtdPlxtNHXhTjj@junction.proxy.rlwy.net:18561/railway";
 
@@ -85,13 +81,12 @@ Date: 9/24/2024
                 // Establish a connection to the MySQL database
                 $con = mysqli_connect($host, $username, $password, $dbname, $port);
 
-
                 $result = mysqli_query($con, "
                 SELECT * FROM book 
                 WHERE title LIKE '%The Librarianist%'
                 OR title LIKE '%No Two Persons%'
                 OR title LIKE '%Tomorrow, and%'
-            ");
+                ");
                 while ($row = mysqli_fetch_assoc($result)) {
                     $title = $row["title"];
                     $img = $row["imgUrl"];
@@ -102,7 +97,7 @@ Date: 9/24/2024
                     echo "
                     <div class='product'>
                         <div class='product-image'>
-                            <img src='$img' alt='$title'>
+                            <img src='$img' alt='$title' />
                         </div>
                         <div class='product-description'>
                             <div>
@@ -114,22 +109,18 @@ Date: 9/24/2024
                             </div>
 
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
-                                
-                                <button class='button-23 product-button' name='book_id' value='$book_id'  >Add To Cart</button>
+                                <button class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
                             </form>
-                            
-                    </div>
-                </div>";
+                        </div>
+                    </div>";
                 }
                 ?>
-
-
             </div>
         </div>
     </div>
 
     <?php
-    include "Includes/indexfooter.php"
+    include "Includes/indexfooter.php";
     ?>
 </body>
 
