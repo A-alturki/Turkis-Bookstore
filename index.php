@@ -109,7 +109,9 @@ Date: 9/24/2024
                             </div>
 
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
-                                <button type='submit' class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
+                                <div>
+                                    <button type='submit' class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
+                                </div>
                             </form>
                         </div>
                     </div>";
