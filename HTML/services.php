@@ -7,7 +7,7 @@ ID: 2136110
 Date: 9/24/2024
 -->
 
-<!DOCTYPE XHTML 1.0 Strict"">
+<!DOCTYPE "XHTML 1.0 Strict">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
