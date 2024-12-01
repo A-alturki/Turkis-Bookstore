@@ -40,7 +40,7 @@ Date: 9/24/2024
             <!-- Add more fields to the form -->
 <div class="card">
     <h1>Feedback Form</h1>
-    <form id="feedbackform" name="feedbackform" method="post" onsubmit="return validateForm()" action="../backend/validation.php">
+    <form id="feedbackform" method="post" onsubmit="return validateForm()" action="../backend/validation.php">
         <fieldset>
             <legend>Personal Information</legend>
             <label for="fname">First name<span>*</span></label>
