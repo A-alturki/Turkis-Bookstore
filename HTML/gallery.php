@@ -70,13 +70,13 @@ function myFunction(imgs) {
     imgname.innerHTML = imgs.alt;
 
     if (imgs.alt === "Stephen King") {
-        imgtext.innerHTML = "<div>Known as the 'King of Horror,' Stephen King has authored over 60 novels, captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.</div>";
+        imgtext.innerHTML = "Known as the 'King of Horror,' Stephen King has authored over 60 novels, captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.";
     } else if (imgs.alt === "George R. R. Martin") {
-        imgtext.innerHTML = "<div>The mastermind behind A Song of Ice and Fire, George R. R. Martin weaves epic fantasy tales filled with political intrigue, complex characters, and unexpected twists.</div>";
+        imgtext.innerHTML = "The mastermind behind A Song of Ice and Fire, George R. R. Martin weaves epic fantasy tales filled with political intrigue, complex characters, and unexpected twists.";
     } else if (imgs.alt === "James Clear") {
-        imgtext.innerHTML = "<div>A modern self-help author, James Clear is best known for Atomic Habits, where he shares practical strategies to build lasting habits and improve personal growth.</div>";
+        imgtext.innerHTML = "A modern self-help author, James Clear is best known for Atomic Habits, where he shares practical strategies to build lasting habits and improve personal growth.";
     } else if (imgs.alt === "Conan Doyle") {
-        imgtext.innerHTML = "<div>The creator of the legendary detective Sherlock Holmes, Sir Arthur Conan Doyle wrote stories that continue to define the mystery genre with their sharp intellect and thrilling plots.</div>";
+        imgtext.innerHTML = "The creator of the legendary detective Sherlock Holmes, Sir Arthur Conan Doyle wrote stories that continue to define the mystery genre with their sharp intellect and thrilling plots.";
     }
 }
 
