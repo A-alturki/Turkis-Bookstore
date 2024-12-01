@@ -66,10 +66,11 @@ Date: 9/24/2024
                     $author = htmlspecialchars($row["author"], ENT_QUOTES, 'UTF-8');
                     $book_id = $row["asin"];
                     if ($price > 0) {
+
                         echo "
                     <div class='product'>
                         <div class='product-image'>
-                            <img src='$img' alt='$title'>
+                            <img src='$img' alt='$title' />
                         </div>
                         <div class='product-description'>
                             <div>
@@ -79,11 +80,14 @@ Date: 9/24/2024
                             <div>
                                 <h4>$$price</h4>
                             </div>
+
                             <form class='product-form' action='../backend/addtocart.php' method='post'>
-                                <button class='button-23 product-button' name='book_id' value='$book_id'  >Add To Cart</button>
+                                <div>
+                                    <button type='submit' class='button-23 product-button' name='book_id' value='$book_id'>Add To Cart</button>
+                                </div>
                             </form>
-        </div>
-    </div>";
+                        </div>
+                    </div>";
                     }
                 }
                 ?>
