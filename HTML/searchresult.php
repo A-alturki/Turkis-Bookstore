@@ -33,6 +33,7 @@ ob_start();
                         $img = $row["imgUrl"];
                         $price = $row["price"];
                         $author = $row["author"];
+                        $book_id = $row["asin"];
                 
                         if ($price != 0){
                             echo "
