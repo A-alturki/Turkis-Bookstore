@@ -13,7 +13,9 @@ ob_start();
         <!-- Search bar input -->
         <div class="searchbar">
             <form class="searchbar" action="backend/search.php" method="get">
-                <input type="text" name="search" />
+                 <div class="searchbar">
+                    <input type="text" name="search"  />
+                </div>
             </form>
         </div>
 
