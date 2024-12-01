@@ -32,8 +32,7 @@ ob_start();
             <!-- Image text -->
             <div id="imgname">Stephen King</div>
             <div id="imgtext" class="centeredtext">
-                <p>Known as the 'King of Horror,' Stephen King has authored over 60 novels, </p>
-                <p>captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.</p>
+                Known as the 'King of Horror,' Stephen King has authored over 60 novels, captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.
             </div>
             <div></div>
         
@@ -66,22 +65,21 @@ ob_start();
 function myFunction(imgs) {
     var expandImg = document.getElementById("expandedImg");
     var imgname = document.getElementById("imgname");
-    var imgtext =document.getElementById("imgtext")
-    expandImg.src = imgs.src; 
+    var imgtext = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
     imgname.innerHTML = imgs.alt;
-    if (imgs.alt ==  "Stephen King"){
-        imgtext.innerHTML = "<p>Known as the 'King of Horror,' Stephen King has authored over 60 novels, </p><p>captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.</p>"
-    }
-    else if (imgs.alt ==  "George R. R. Martin"){
-        imgtext.innerHTML = "<p>The mastermind behind A Song of Ice and Fire, George R. R. Martin weaves epic fantasy </p><p>tales filled with political intrigue, complex characters, and unexpected twists.</p>"
-    }
-    else if (imgs.alt ==  "James Clear"){
-        imgtext.innerHTML = "<p>A modern self-help author, James Clear is best known for Atomic Habits, where he shares </p><p>practical strategies to build lasting habits and improve personal growth.</p>"
-    }
-    else if (imgs.alt ==  "Conan Doyle"){
-        imgtext.innerHTML = "<p>The creator of the legendary detective Sherlock Holmes, Sir Arthur Conan Doyle wrote </p><p>stories that continue to define the mystery genre with their sharp intellect and thrilling plots.</p>"
+
+    if (imgs.alt === "Stephen King") {
+        imgtext.innerHTML = "<div>Known as the 'King of Horror,' Stephen King has authored over 60 novels, captivating readers with his gripping stories of suspense, supernatural elements, and human emotion.</div>";
+    } else if (imgs.alt === "George R. R. Martin") {
+        imgtext.innerHTML = "<div>The mastermind behind A Song of Ice and Fire, George R. R. Martin weaves epic fantasy tales filled with political intrigue, complex characters, and unexpected twists.</div>";
+    } else if (imgs.alt === "James Clear") {
+        imgtext.innerHTML = "<div>A modern self-help author, James Clear is best known for Atomic Habits, where he shares practical strategies to build lasting habits and improve personal growth.</div>";
+    } else if (imgs.alt === "Conan Doyle") {
+        imgtext.innerHTML = "<div>The creator of the legendary detective Sherlock Holmes, Sir Arthur Conan Doyle wrote stories that continue to define the mystery genre with their sharp intellect and thrilling plots.</div>";
     }
 }
+
 </script>
 
 
